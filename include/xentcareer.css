@@ -1,0 +1,77 @@
+
+td#joblist a{
+	color: 000000; 
+	text-decoration: underline; 
+	font-weight: bold; 
+	background-color: transparent;
+
+}
+
+td#joblist a:hover{
+	color: #C65F2A;
+}
+
+td#joblist{
+	font-size: 10px;
+	color: #000000;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 3px;
+	font-weight: bold;
+	border-bottom: 1px;
+	border-color: Black;
+}
+
+td#joblistheader{
+	font-size: 10px;
+	color: #FFFFFF;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 3px;
+	font-weight: bold;
+	border-bottom: 1px;
+	border-color: Black;
+}
+
+td#joblistheader a{
+	font-size: 10px;
+	color: #FFFFFF;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 3px;
+	font-weight: bold;
+	border-bottom: 1px;
+	border-color: Black;
+}
+
+
+td#joblistbody a{
+
+	color: #000000;
+	text-decoration: underline; 
+	background-color: transparent;
+
+	font-size: 10px;
+
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 3px;
+	font-weight: bold;
+
+}
+
+td#joblistbody a:hover{
+	color: #C65F2A
+}
+
+.itemBreak {
+	font: bold;
+}
+
+li.quoteliste{
+	margin: 5px;
+}
+
+.temoignage{
+	
+}

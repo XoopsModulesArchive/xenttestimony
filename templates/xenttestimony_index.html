@@ -1,0 +1,64 @@
+    <script type="text/javascript">
+    <!--
+    nereidFadeObjects = new Object();
+    nereidFadeTimers = new Object();
+    function nereidFade(object, destOp, rate, delta){
+        if (!document.all) {
+            return;
+        }
+        if (object != '[object]'){
+            setTimeout('nereidFade('+object+','+destOp+','+rate+','+delta+')',0);
+            return;
+        }
+        clearTimeout(nereidFadeTimers[object.sourceIndex]);
+        diff = destOp-object.filters.alpha.opacity;
+        direction = 1;
+        if (object.filters.alpha.opacity > destOp){
+            direction = -1;
+        }
+        delta = Math.min(direction*diff,delta);
+        object.filters.alpha.opacity+=direction*delta;
+
+        if (object.filters.alpha.opacity != destOp){
+            nereidFadeObjects[object.sourceIndex]=object;
+            nereidFadeTimers[object.sourceIndex]=setTimeout('nereidFade(nereidFadeObjects['+object.sourceIndex+'],'+destOp+','+rate+','+delta+')',rate);
+        }
+    }
+    //-->
+    </script>
+<table border='0' cellpadding='4' cellspacing='1'>
+        <tr>
+          <td class="even"><font size="1">| <a href="#temoignage"><{$lang_MENUTEMOIGNAGE}></a> | <a href="desctitre.php"><{$lang_MENUDESCTITRE}></a> | <a href="emplois.php"><{$lang_MENUJOB}></a> |</font> </td>
+        </tr>
+</table>
+
+<table border='0' cellpadding='4' cellspacing='1'>
+        <tr>
+          <td><{$XENTCAREER_INTRO}></td>
+        </tr>
+</table>
+<br>
+<a name="1"></a>
+<h4 style="text-align:left;"><{$lang_TEMOIGNAGETITLE}></h4>
+
+
+
+	<{foreach item=temoignage from=$temoignageliste}>
+    <table width="100%" class="temoignage">
+    	<tr>
+        	<!-- <{$temoignage.fadeImage}> -->
+           <td width="15%"><a href="<{$temoignage.lien}><{$temoignage.id}>"><img src="<{$temoignage.quote_pict}>" width="70" height="86" <{$temoignage.fadeImage}>></a></td>
+           <td width="85%" colspan="2"><a href="<{$temoignage.lien}><{$temoignage.id}>"><{$temoignage.quote_nom}></a> (<{$temoignage.quote_titreposte}>)<br><i><{$temoignage.quote_quotetitle}></i><br></td>
+
+        </tr>
+     </table>
+     <br>
+	<{/foreach}>
+
+
+
+
+<br><a href="temoignagelist.php"><{$LANG_viewotherquote}></a>
+<br><br>
+
+<br><br>

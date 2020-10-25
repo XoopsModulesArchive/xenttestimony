@@ -1,0 +1,22 @@
+<h4 style="text-align:left;"><{$lang_TEMOIGNAGETITLE}></h4> 
+<ul>
+<{foreach item=temoignage from=$temoignageliste}>
+	<li class="quoteliste">
+		<a href="<{$temoignage.lien}><{$temoignage.id}>">
+			<{$temoignage.quote_nom}>
+		</a>
+		<{if !$temoignage.quote_titreposte == ""}>
+			(<{$temoignage.quote_titreposte}>)
+		<{/if}>
+		<br>
+		<i>
+			<{$temoignage.quote_quotetitle}>
+		</i>
+	</li>
+	<br>
+<{/foreach}>			
+</ul> 
+ 
+ 
+ 
+    
